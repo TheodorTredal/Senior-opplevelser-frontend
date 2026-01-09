@@ -17,10 +17,6 @@ const navLink =
 const dropdownTrigger =
   "text-xl font-medium text-white hover:underline bg-transparent";
 
-const dropdownItem =
-  "cursor-pointer";
-
-
 
 const HoverDropdown = ({
   label,
@@ -88,6 +84,7 @@ export const Navbar = () => {
           <HoverDropdown
             label="Reiser"
             items={[
+              { href: "/reiser/alle-reiser", label: "Alle reiser" },
               { href: "/reiser/rundreiser", label: "Rundreiser" },
               { href: "/reiser/dagsturer", label: "Dagsturer" },
               { href: "/reiser/natur", label: "Natur & fjord" },
@@ -106,7 +103,7 @@ export const Navbar = () => {
           <HoverDropdown
             label="Om oss"
             items={[
-              { href: "/praktisk-info", label: "Om oss" },
+              { href: "/var-historie", label: "Vår historie" },
               { href: "/praktisk-info/tilrettelegging", label: "Tilrettelegging" },
               { href: "/praktisk-info/helse", label: "Helse & trygghet" },
               { href: "/praktisk-info/avbestilling", label: "Avbestilling" },
