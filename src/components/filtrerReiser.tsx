@@ -8,15 +8,15 @@ import { Checkbox } from "@/components/ui/checkbox"
 
 export const ReiseFilter = () => {
   return (
-    <Card className="w-full min-w-full p-0">
+    <Card className="w-full min-w-full">
       <div className="p-6 space-y-6">
         <CardTitle className="text-xl">
           Filtrer reiser
         </CardTitle>
 
-        <CardContent className="p-0 space-y-6">
+        <CardContent className="p-0 w-full space-y-6">
           {/* Destinasjon */}
-          <div className="space-y-3">
+          <div className="space-y-3 pt-4">
             <p className="text-sm font-medium">
               Destinasjon
             </p>
@@ -30,7 +30,7 @@ export const ReiseFilter = () => {
           </div>
 
           {/* Pris */}
-          <div className="space-y-3">
+          <div className="space-y-3 pt-4">
             <p className="text-sm font-medium">
               Pris
             </p>
@@ -43,7 +43,7 @@ export const ReiseFilter = () => {
           </div>
 
           {/* Varighet */}
-          <div className="space-y-3">
+          <div className="space-y-3 pt-4">
             <p className="text-sm font-medium">
               Varighet
             </p>
@@ -77,7 +77,7 @@ const FilterCheckbox = ({ label }: { label: string }) => {
         disabled
         className="mt-0.5"
       />
-      <span className="text-sm leading-5 text-muted-foreground">
+      <span className="text-sm pl-4 leading-5 text-black">
         {label}
       </span>
     </label>
