@@ -1,6 +1,7 @@
 # Sette oppe en enkel frontend
   - Hjemmeside
-  - Navbar
+  - Navbar X
+  - Footer
   - Reiser
   - Kalender
   - kurs og seminar
@@ -13,6 +14,9 @@
 # Admin side
   - Skal være enkelt for brukeren å endre på resurser på nettsiden (bilder, tekst og priser)
   - Dataen som blir lagret på admin siden skal bli lagret på en database
+
+  - Admin siden skal være nesten identisk til det brukeren ser, men
+    admin skal ha mulighet til å redigere siden.
 
 
 # Sette opp en backend

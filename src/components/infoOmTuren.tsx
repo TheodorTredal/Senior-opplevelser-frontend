@@ -18,9 +18,9 @@ export const InfoOmReisen = () => {
       className="w-full"
     >
       {/* Ytre wrapper – sentrer innholdet */}
-      <div className="flex justify-center px-6 py-8">
+      <div className="flex justify-center px-6 py-8 bg-white rounded-xl">
         {/* Indre wrapper – kontroller bredde */}
-        <div className="w-full max-w-2xl space-y-4">
+        <div className="w-full max-w-2xl space-y-4 ">
           {/* Alltid synlig innhold */}
           <div className="space-y-2">
             <h2 className="text-lg font-semibold">

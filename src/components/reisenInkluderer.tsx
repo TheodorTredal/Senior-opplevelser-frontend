@@ -20,7 +20,7 @@ export const ReisenInkluderer = () => {
   const rightColumn = inkludert.slice(midpoint);
 
   return (
-    <div className="w-full p-6 rounded-lg">
+    <div className="w-full p-6 rounded-lg bg-white">
       <h3 className="text-xl font-semibold mb-4">Reisen inkluderer</h3>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
         <ul className="space-y-3">

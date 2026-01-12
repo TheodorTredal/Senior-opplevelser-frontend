@@ -6,24 +6,25 @@ export const Footer = () => {
     {
       title: 'Våre reiser',
       links: [
-        { text: 'ReiseKalender', href: '#' },
-        { text: 'Leserreiser', href: '#' }
+        { text: 'Reisekalender', href: '/Reisekalender' },
+        { text: 'Kurs og seminarer', href: '/kurs-og-seminarer'},
+        { text: 'Leserreiser', href: '/leserreiser' },
       ]
     },
     {
       title: 'Senior opplevelser',
       links: [
-        { text: 'Kundeservice', href: '#' },
-        { text: 'Om Senior opplevelser', href: '#' },
+        { text: 'Kundeservice', href: '/kundeservice' },
+        { text: 'Om Senior opplevelser', href: '/om-oss' },
         { text: 'Medlem av Reisegarantifondet', href: '#' }
       ]
     },
     {
       title: 'Informasjon',
       links: [
-        { text: 'Reisebetingelser', href: '#' },
-        { text: 'Personvernerklæring', href: '#' },
-        { text: 'Informasjonskapsler', href: '#' }
+        { text: 'Reisebetingelser', href: '/reisebetingelser' },
+        { text: 'Personvernerklæring', href: '/personvernerklæring' },
+        { text: 'Informasjonskapsler', href: '/informasjonskapsler' },
       ]
     }
   ];
@@ -31,7 +32,7 @@ export const Footer = () => {
   const socialLinks = [
     { icon: Instagram, text: 'Instagram', href: '#' },
     { icon: Facebook, text: 'Facebook', href: '#' },
-    { icon: Mail, text: 'Einar klubben nyhetsbrev', href: '#' }
+    { icon: Mail, text: 'Einar klubben nyhetsbrev', href: '/einar-klubben' }
   ];
 
   return (

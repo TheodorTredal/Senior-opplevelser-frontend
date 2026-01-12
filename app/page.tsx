@@ -1,4 +1,5 @@
 import { DestinationCarousel } from "@/src/components/destination-carousel";
+import { RingOss } from "@/src/components/ringOss";
 
 
 export default function Home() {
@@ -7,6 +8,11 @@ export default function Home() {
       <section className="pt-10">
         <DestinationCarousel />
       </section>
+
+      <section>
+        <RingOss></RingOss>
+      </section>
+
     </main>
   );
 }
