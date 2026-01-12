@@ -1,6 +1,7 @@
 import { ReiseBreadcrumb } from "@/src/components/reiseBreadCrumb"
 import { InfoOmReisen } from "@/src/components/infoOmTuren";
 import { DatoOgPriser } from "@/src/components/datoOgPris";
+import { ReisenInkluderer } from "@/src/components/reisenInkluderer";
 
 
 const testImg = "";
@@ -47,6 +48,10 @@ export default async function ReisePage({
             <div className="bg-gray-200">
                 <DatoOgPriser></DatoOgPriser>
             </div>
+        </section>
+
+        <section>
+            <ReisenInkluderer></ReisenInkluderer>
         </section>
 
     </main>

@@ -60,11 +60,11 @@ export default function AlleReiserPage() {
 
 
         <div className="flex gap-8 pt-10">
-          <aside className="p-2">
+          <aside className=" w-72 p-2">
             <ReiseFilter />
           </aside>
 
-            <section className="flex flex-col gap-10 w-full">
+            <section className="flex flex-col gap-4 w-full">
               {vestlandetReiser.map((reise) => (
                   <div key={reise.slug} className="p-2 w-full">
                   <ReiseCard {...reise} />

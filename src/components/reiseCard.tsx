@@ -36,7 +36,7 @@ export const ReiseCard = ({
         group
         flex flex-row items-stretch
         overflow-hidden
-        w-72 h-72
+        w-full h-72
         p-0
         cursor-pointer
         transition-shadow

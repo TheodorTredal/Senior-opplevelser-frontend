@@ -8,7 +8,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 
 export const ReiseFilter = () => {
   return (
-    <Card className="w-96">
+    <Card className="w-full">
       <div className="p-6 space-y-6">
         <CardTitle className="text-xl">
           Filtrer reiser
