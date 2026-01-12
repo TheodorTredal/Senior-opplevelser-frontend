@@ -1,4 +1,6 @@
 import { ReiseBreadcrumb } from "@/src/components/reiseBreadCrumb"
+import { InfoOmReisen } from "@/src/components/infoOmTuren";
+import { DatoOgPriser } from "@/src/components/datoOgPris";
 
 
 const testImg = "";
@@ -16,21 +18,49 @@ export default async function ReisePage({
     .replace(/\b\w/g, (l) => l.toUpperCase())
 
   return (
-<main className="space-y-6 min-h-screen border border-red-400">
-  <ReiseBreadcrumb title={title} />
+    
+    <main className="flex flex-col space-y-6 min-h-screen p-8">
+        {/* Header-seksjon */}
+        <section className="space-y-2">
+            <ReiseBreadcrumb title={title} />
 
-  <h1 className="text-2xl font-bold pt-4">
-    {title}
-  </h1>
+            <h1 className="text-2xl font-bold">
+            {title}
+            </h1>
+        </section>
 
-  <div className="w-full h-120 flex">
-    <img
-      src="https://placehold.co/800x600"
-      alt="Testbilde"
-      className="w-full h-96 pt-4 object-cover border-r border-red-600"
-    />
-  </div>
-</main>
+        {/* Bilde */}
+        <section>
+          <img
+            src="https://placehold.co/1200x600"
+            alt="Testbilde"
+            className="w-full h-96 object-cover rounded-xl"
+          />
+        </section>
+
+        {/* Info */}
+        <section>
+          <InfoOmReisen />
+        </section>
+        
+        <section>
+            <div className="bg-gray-200">
+                <DatoOgPriser></DatoOgPriser>
+            </div>
+        </section>
+
+    </main>
+
 
   )
 }
+
+
+
+/**
+ * 1. Kort om destinasjonen
+ * 
+ * 2. Dato og prid
+ * 
+ * 3. Hva som er inkludert i prisen
+ */

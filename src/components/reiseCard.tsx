@@ -36,7 +36,7 @@ export const ReiseCard = ({
         group
         flex flex-row items-stretch
         overflow-hidden
-        w-full max-w-2xl h-72
+        w-72 h-72
         p-0
         cursor-pointer
         transition-shadow
@@ -45,7 +45,6 @@ export const ReiseCard = ({
     >
 
         <Link href={`/reiser/${slug}`} className="block">
-          {/* Bilde */}
           <img
             src={imageSrc}
             alt={imageAlt}

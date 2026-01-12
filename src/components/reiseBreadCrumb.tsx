@@ -26,7 +26,7 @@ export function ReiseBreadcrumb({ title }: ReiseBreadcrumbProps) {
 
         <BreadcrumbItem>
           <BreadcrumbLink asChild>
-            <Link href="/reiser">Reiser</Link>
+            <Link href="/reiser/alle-reiser">Alle reiser</Link>
           </BreadcrumbLink>
         </BreadcrumbItem>
 
