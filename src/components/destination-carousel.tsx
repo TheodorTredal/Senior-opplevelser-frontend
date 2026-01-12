@@ -9,54 +9,39 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 
-
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardAction,
-} from "@/components/ui/card";
-
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
-
-const TravelCard = ({ title }: { title?: string }) => {
+export const TravelCard = ({ title }: { title?: string }) => {
   return (
-    <Card className="w-full max-w-sm h-40 overflow-hidden shadow-lg border-none bg-brand-cta flex flex-col">
+    <Card className="w-72 max-w-sm overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300 border-none">
       
-      <CardHeader className="px-4 py-2 space-y-0 text-white">
-        <span className="uppercase tracking-wide text-xs opacity-90">
-          Reise til.. ?
+      {/* Header med gradient */}
+      <CardHeader className="px-4 py-2 bg-brand-cta text-white">
+        <span className="font-semibold tracking-wide text-xs opacity-90">
+          Opplev.. ?
         </span>
 
-        <CardTitle className="text-lg font-semibold leading-tight">
-          {title ?? " "}
+        <CardTitle className="text-lg font-bold leading-tight mt-1">
+          {title ?? "Destinasjon"}
         </CardTitle>
       </CardHeader>
 
-      <CardContent className="flex justify-between items-center bg-white px-4 py-3">
-        <p className="text-xl font-bold text-gray-700">
-          Fra 1 995 kr
-        </p>
+      {/* Innhold */}
+      <CardContent className="flex justify-between items-center px-4 bg-white">
+        <div className="flex flex-col">
+          <span className="text-sm text-gray-500">Fra</span>
+          <span className="text-xl font-bold text-gray-800">1 995 kr</span>
+        </div>
 
-        <Button size="sm">Les mer</Button>
+        <Button size="sm" className="bg-brand-blue text-white hover:bg-brand-purple">
+          Les mer
+        </Button>
       </CardContent>
 
     </Card>
   );
 };
-
-
-
-
-
-
-
-
-
-
 
 
 const destinations = [

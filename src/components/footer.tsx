@@ -7,7 +7,7 @@ export const Footer = () => {
       title: 'Våre reiser',
       links: [
         { text: 'Reisekalender', href: '/Reisekalender' },
-        { text: 'Kurs og seminarer', href: '/kurs-og-seminarer'},
+        { text: 'Kurs og seminar', href: '/kurs-og-seminar'},
         { text: 'Leserreiser', href: '/leserreiser' },
       ]
     },

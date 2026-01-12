@@ -1,6 +1,6 @@
 import { DestinationCarousel } from "@/src/components/destination-carousel";
 import { RingOss } from "@/src/components/ringOss";
-
+import { VaareOpplevelser } from "@/src/components/vareOpplevelser";
 
 export default function Home() {
   return (
@@ -11,6 +11,10 @@ export default function Home() {
 
       <section>
         <RingOss></RingOss>
+      </section>
+
+      <section>
+        <VaareOpplevelser></VaareOpplevelser>
       </section>
 
     </main>

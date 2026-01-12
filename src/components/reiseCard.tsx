@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { MapPin } from "lucide-react";
+
 
 import {
   Card,
@@ -15,6 +17,7 @@ export interface ReiseCardProps {
   price: number;
   duration?: string;
   highlights?: string;
+  location?: string;
   onClick?: () => void;
   slug: string;
 }
@@ -27,6 +30,7 @@ export const ReiseCard = ({
   duration,
   highlights,
   onClick,
+  location,
   slug,
 }: ReiseCardProps) => {
   return (
@@ -44,7 +48,7 @@ export const ReiseCard = ({
       "
     >
 
-        <Link href={`/reiser/${slug}`} className="block">
+        <Link href={`/${slug}`} className="block">
           <img
             src={imageSrc}
             alt={imageAlt}
@@ -60,7 +64,7 @@ export const ReiseCard = ({
       <div className="flex flex-col flex-1 justify-between p-6">
         <div className="space-y-2">
           <CardTitle className="text-xl leading-snug">
-            <Link href={`/reiser/${slug}`} className="hover:underline">
+            <Link href={`/${slug}`} className="hover:underline">
                 {title}
             </Link>
           </CardTitle>
@@ -68,6 +72,16 @@ export const ReiseCard = ({
           {(duration || highlights) && (
             <p className="text-sm text-muted-foreground">
               {[duration, highlights].filter(Boolean).join(" • ")}
+            </p>
+          )}
+
+          {(location) && (
+            <p className="flex items-center space-x-4 text-sm text-muted-foreground">
+              <MapPin></MapPin>
+              <span>
+                {location}
+              </span>
+
             </p>
           )}
         </div>
@@ -86,7 +100,7 @@ export const ReiseCard = ({
               focus:ring-2 focus:ring-brand-blue focus:ring-offset-2
             "
           >
-            <Link href={`/reiser/${slug}`}>
+            <Link href={`/${slug}`}>
                 Les mer
             </Link>
           </Button>

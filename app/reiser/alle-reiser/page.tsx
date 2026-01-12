@@ -9,7 +9,7 @@ const vestlandetReiser = [
     price: 1995,
     duration: "5 dager",
     highlights: "Komfortabel buss • Lokal guide",
-    slug: "opplev-geiranger",
+    slug: "reiser/opplev-geiranger",
   },
   {
     title: "Bergen & Fløyen",
@@ -18,7 +18,7 @@ const vestlandetReiser = [
     price: 1495,
     duration: "3 dager",
     highlights: "Byvandring • Fløibanen",
-    slug: "bergen-og-floyen",
+    slug: "reiser/bergen-og-floyen",
   },
   {
     title: "Sognefjorden rundt",
@@ -27,7 +27,7 @@ const vestlandetReiser = [
     price: 2495,
     duration: "6 dager",
     highlights: "Fjordcruise • Spektakulær natur",
-    slug: "sognefjorden-rundt",
+    slug: "reiser/sognefjorden-rundt",
   },
   {
     title: "Hardanger & Vøringsfossen",
@@ -36,7 +36,7 @@ const vestlandetReiser = [
     price: 1795,
     duration: "4 dager",
     highlights: "Fosser • Fjordlandskap",
-    slug: "hardanger-voringsfossen",
+    slug: "reiser/hardanger-voringsfossen",
   },
   {
     title: "Preikestolen & Lysefjorden",
@@ -45,7 +45,7 @@ const vestlandetReiser = [
     price: 2295,
     duration: "5 dager",
     highlights: "Fottur • Fjordcruise",
-    slug: "preikestolen-lysefjorden",
+    slug: "reiser/preikestolen-lysefjorden",
   },
 ]
 
