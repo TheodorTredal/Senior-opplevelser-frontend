@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 export interface AvreiseProps {
   id: string;
   dato: string;
+  tid?: string;
   sted: string;
   varighet: string;
   pris: string;
@@ -92,6 +93,7 @@ export const DatoOgPrisKursOgSeminar = ({ avreise, onBestill}: DatoOgPrisProps) 
     <div className="w-full rounded-xl border bg-background">
       <div className="flex justify-between p-4">
         <InfoItem label="Dato" value={avreise.dato} />
+        <InfoItem label="Tidspunkt" value={avreise.tid ?? "Kommer snart"} />
         <InfoItem label="Sted" value={avreise.sted} />
         <InfoItem label="Varighet" value={avreise.varighet} />
         <InfoItem label="Pris fra" value={avreise.pris} />

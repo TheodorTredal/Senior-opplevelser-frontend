@@ -1,5 +1,6 @@
 import { ReiseCard } from "@/src/components/reiseCard";
 import { ReiseFilter } from "@/src/components/filtrerReiser";
+import { ReiseBreadcrumb } from "@/src/components/reiseBreadCrumb";
 
 const vestlandetReiser = [
   {
@@ -52,6 +53,7 @@ const vestlandetReiser = [
 export default function AlleReiserPage() {
   return (
     <main className="p-8">
+      <ReiseBreadcrumb title=""></ReiseBreadcrumb>
       <header className="space-y-4">
         <h1 className="text-2xl font-bold">
           Alle reiser

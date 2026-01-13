@@ -1,6 +1,6 @@
 import { ReiseCard } from "@/src/components/reiseCard";
 import { ReiseFilter } from "@/src/components/filtrerReiser";
-
+import { KursOgSeminarBreadcrumb } from "@/src/components/reiseBreadCrumb";
 
 const kursOgSeminarer = [
   {
@@ -19,6 +19,7 @@ const kursOgSeminarer = [
 const KursOgSeminarPage = () => {
     return (
     <main className="p-8">
+      <KursOgSeminarBreadcrumb title=""></KursOgSeminarBreadcrumb>
       <header className="space-y-4">
         <h1 className="text-2xl font-bold">
           Kurs og Seminar

@@ -3,13 +3,24 @@ import { InfoOmOpplevelsen } from "@/src/components/infoOmTuren";
 import { StickyBestillingsButtonKursOgSeminar } from "@/src/components/stickyBestillingsButton";
 import { DatoOgPriserKursOgSeminarer } from "@/src/components/datoOgPris";
 import OpplevelsenInkluderer from "@/src/components/opplevelsenInkluderer";
+import { ReiseProgramKomponent } from "@/src/components/reiseProgram";
 
-
+const dagsProgram = [
+  { tid: "17:00", aktivitet: "Ankomst og velkomst" },
+  { tid: "17:15", aktivitet: "Introduksjon til kveldens viner og program" },
+  { tid: "17:30", aktivitet: "Smaking av de første vinene med veiledning" },
+  { tid: "18:30", aktivitet: "Pause med lett servering" },
+  { tid: "19:00", aktivitet: "Videre vinsmaking og fordypning i smaksnoter" },
+  { tid: "20:30", aktivitet: "Åpen smaking og spørsmål til sommelier" },
+  { tid: "21:30", aktivitet: "Avslutning og mulighet for kjøp av vin" },
+  { tid: "22:00", aktivitet: "Takk for i kveld" },
+]
 
 const kursOgSeminarSpesifikkInfo = [
   {
     id: "1",
     dato: "12. juni 2026",
+    tid: "17:00",
     sted: "Bergen",
     varighet: "5 timer",
     pris: "995 kr",
@@ -17,6 +28,7 @@ const kursOgSeminarSpesifikkInfo = [
   {
     id: "2",
     dato: "20. juli 2026",
+    tid: "17:00",
     sted: "Bergen",
     varighet: "5 timer",
     pris: "995 kr",
@@ -77,14 +89,16 @@ const KursOgSeminarerPage = async ({ params }: PageProps) => {
 
         <section id="om-kurset" className="scroll-mt-24">
             <InfoOmOpplevelsen
-            tittel="Tittel"
-            innhold="vinsmaking på hotel grand terminus"
-            lesMerInnhold="Mer info om vinsmaking på hotel terminus"
-            ></InfoOmOpplevelsen>
+                tittel="Tittel"
+                innhold="vinsmaking på hotel grand terminus"
+                lesMerInnhold="Mer info om vinsmaking på hotel terminus"
+            />
         </section>
 
         <section id="dato-og-priser" className="scroll-mt-24">
-            <DatoOgPriserKursOgSeminarer avganger={kursOgSeminarSpesifikkInfo}></DatoOgPriserKursOgSeminarer>
+            <DatoOgPriserKursOgSeminarer 
+                avganger={kursOgSeminarSpesifikkInfo} 
+            />
         </section>
 
         <section id="kurset-inkluderer">
@@ -94,7 +108,11 @@ const KursOgSeminarerPage = async ({ params }: PageProps) => {
             </OpplevelsenInkluderer>
         </section>
 
-
+        <section id="program" className="scroll-mt-24">
+            <ReiseProgramKomponent
+                program={dagsProgram}
+            />            
+        </section>
     </main>
   )
 }
