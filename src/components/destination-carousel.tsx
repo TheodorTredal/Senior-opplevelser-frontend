@@ -65,7 +65,7 @@ const destinations = [
 export function DestinationCarousel() {
   return (
     <Carousel
-      className="w-full max-w-7xl mx-auto"
+      className="w-full p-4 mx-auto"
       opts={{ loop: true }}
     >
       <CarouselContent>

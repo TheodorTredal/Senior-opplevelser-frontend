@@ -2,6 +2,8 @@ import { ReiseCard } from "@/src/components/reiseCard";
 import { ReiseFilter } from "@/src/components/filtrerReiser";
 import { ReiseBreadcrumb } from "@/src/components/reiseBreadCrumb";
 
+const tmpImageSrc = "https://placehold.co/200x200"
+
 const vestlandetReiser = [
   {
     title: "Opplev Geirangerfjorden",
@@ -14,7 +16,7 @@ const vestlandetReiser = [
   },
   {
     title: "Bergen & Fløyen",
-    imageSrc: "/images/destinations/bergen.jpg",
+    imageSrc: tmpImageSrc,
     imageAlt: "Bryggen i Bergen",
     price: 1495,
     duration: "3 dager",
@@ -23,7 +25,7 @@ const vestlandetReiser = [
   },
   {
     title: "Sognefjorden rundt",
-    imageSrc: "/images/destinations/sognefjorden.jpg",
+    imageSrc: tmpImageSrc,
     imageAlt: "Sognefjorden i sollys",
     price: 2495,
     duration: "6 dager",
@@ -32,7 +34,7 @@ const vestlandetReiser = [
   },
   {
     title: "Hardanger & Vøringsfossen",
-    imageSrc: "/images/destinations/hardanger.jpg",
+    imageSrc: tmpImageSrc,
     imageAlt: "Vøringsfossen i Hardanger",
     price: 1795,
     duration: "4 dager",
@@ -41,7 +43,7 @@ const vestlandetReiser = [
   },
   {
     title: "Preikestolen & Lysefjorden",
-    imageSrc: "/images/destinations/preikestolen.jpg",
+    imageSrc: tmpImageSrc,
     imageAlt: "Utsikt fra Preikestolen",
     price: 2295,
     duration: "5 dager",

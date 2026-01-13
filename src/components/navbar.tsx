@@ -62,8 +62,62 @@ const HoverDropdown = ({
 
 
 
+interface MobileMenuProps {
+  open: boolean;
+  onNavigate?: () => void;
+}
+
+export function MobileMenu({ open, onNavigate }: MobileMenuProps) {
+  if (!open) return null;
+
+  return (
+    <div className="absolute top-20 left-0 z-50 w-full bg-brand-navbar px-6 py-6 shadow-md md:hidden space-y-4">
+      
+      <Link href="/reisekalender" onClick={onNavigate} className="block text-xl text-white">
+        Reisekalender
+      </Link>
+
+      <DropdownMenu>
+        <DropdownMenuTrigger className="text-xl text-white">
+          Reiser
+        </DropdownMenuTrigger>
+        <DropdownMenuContent className="w-56">
+          <DropdownMenuItem asChild>
+            <Link href="/reiser/alle-reiser" onClick={onNavigate}>Alle reiser</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
+            <Link href="/reiser/dagsturer" onClick={onNavigate}>Dagsturer</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
+            <Link href="/reiser/natur" onClick={onNavigate}>Natur & fjord</Link>
+          </DropdownMenuItem>
+          <DropdownMenuItem asChild>
+            <Link href="/reiser/kultur" onClick={onNavigate}>Kultur & by</Link>
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+
+      <Link href="/kurs-og-seminar" onClick={onNavigate} className="block text-xl text-white">
+        Kurs & seminar
+      </Link>
+
+      <Link href="/einarklubben" onClick={onNavigate} className="block text-xl text-white">
+        Einar klubben
+      </Link>
+
+      <Link href="/login" onClick={onNavigate} className="block text-xl text-white">
+        Login
+      </Link>
+    </div>
+  );
+}
+
+
 
 export const Navbar = () => {
+
+  const [mobileOpen, setMobileOpen] = useState<boolean>(false);
+
   return (
     <nav className="bg-brand-navbar shadow-md">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
@@ -85,7 +139,6 @@ export const Navbar = () => {
             label="Reiser"
             items={[
               { href: "/reiser/alle-reiser", label: "Alle reiser" },
-              { href: "/reiser/rundreiser", label: "Rundreiser" },
               { href: "/reiser/dagsturer", label: "Dagsturer" },
               { href: "/reiser/natur", label: "Natur & fjord" },
               { href: "/reiser/kultur", label: "Kultur & by" },
@@ -118,7 +171,28 @@ export const Navbar = () => {
         >
           Login
         </Button>
+
+
+        <button
+           onClick={() => setMobileOpen(!mobileOpen)}
+           className="md:hidden flex flex-col gap-1.5"
+           aria-label="Toggle menu"
+         >
+           <span className="h-0.5 w-6 bg-white" />
+           <span className="h-0.5 w-6 bg-white" />
+           <span className="h-0.5 w-6 bg-white" />
+         </button>
+
+
+            <MobileMenu open={mobileOpen}
+            onNavigate={() => setMobileOpen(false)}>
+            </MobileMenu>
+
       </div>
     </nav>
   );
 }
+
+
+
+
