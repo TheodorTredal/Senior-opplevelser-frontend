@@ -1,18 +1,44 @@
+"use client";
+
 
 import { Button } from "@/components/ui/button"
 
-export const DatoOgPris = () => {
+export interface AvreiseProps {
+  id: string;
+  dato: string;
+  sted: string;
+  varighet: string;
+  pris: string;
+}
+
+export interface DatoOgPrisProps {
+  avreise: AvreiseProps;
+  onBestill?: (id: string) => void;
+}
+
+
+export interface DatoOgPriserProps {
+  avganger: AvreiseProps[];
+}
+
+
+export const DatoOgPris = ({ avreise, onBestill}: DatoOgPrisProps) => {
   return (
     <div className="w-full rounded-xl border bg-background">
       <div className="flex justify-between p-4">
-        <InfoItem label="Avreise" value="12. juni 2026" />
-        <InfoItem label="Avreisested" value="Oslo" />
-        <InfoItem label="Varighet" value="5 dager" />
-        <InfoItem label="Pris fra" value="1 995 kr" />
+        <InfoItem label="Dato" value={avreise.dato} />
+        <InfoItem label="Avreisested" value={avreise.sted} />
+        <InfoItem label="Varighet" value={avreise.varighet} />
+        <InfoItem label="Pris fra" value={avreise.pris} />
 
         <div className="flex items-center">
-            <Button className="bg-brand-blue"
-            size="lg">Bestill reise</Button>
+            <Button 
+              className="bg-brand-blue"
+              size="lg"
+              onClick={() => onBestill?.(avreise.id)}
+            >
+              Bestill reise
+            </Button>
         </div>
       </div>
     </div>
@@ -38,14 +64,70 @@ const InfoItem = ({
 
 
 
-export const DatoOgPriser = () => {
+
+export const DatoOgPriser = ({ avganger }: DatoOgPriserProps) => {
 
     return (
         <div className="space-y-2 p-6">
-            <DatoOgPris></DatoOgPris>
-            <DatoOgPris></DatoOgPris>
-            <DatoOgPris></DatoOgPris>
-            <DatoOgPris></DatoOgPris>
+          {avganger.map((avreise) => (
+            <DatoOgPris
+              key={avreise.id}
+              avreise={avreise}
+              onBestill={(id) => {
+                console.log("Bestiller avreise:", id);
+              }}
+            
+            ></DatoOgPris>
+          ))}
+        </div>
+    )
+}
+
+
+
+
+
+export const DatoOgPrisKursOgSeminar = ({ avreise, onBestill}: DatoOgPrisProps) => {
+  return (
+    <div className="w-full rounded-xl border bg-background">
+      <div className="flex justify-between p-4">
+        <InfoItem label="Dato" value={avreise.dato} />
+        <InfoItem label="Sted" value={avreise.sted} />
+        <InfoItem label="Varighet" value={avreise.varighet} />
+        <InfoItem label="Pris fra" value={avreise.pris} />
+
+        <div className="flex items-center">
+            <Button 
+              className="bg-brand-blue"
+              size="lg"
+              onClick={() => onBestill?.(avreise.id)}
+            >
+              Bestill reise
+            </Button>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+
+
+
+
+export const DatoOgPriserKursOgSeminarer = ({ avganger }: DatoOgPriserProps) => {
+
+    return (
+        <div className="space-y-2 p-6">
+          {avganger.map((avreise) => (
+            <DatoOgPrisKursOgSeminar
+              key={avreise.id}
+              avreise={avreise}
+              onBestill={(id) => {
+                console.log("Bestiller avreise:", id);
+              }}
+            
+            ></DatoOgPrisKursOgSeminar>
+          ))}
         </div>
     )
 }

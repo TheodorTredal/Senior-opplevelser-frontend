@@ -1,5 +1,30 @@
 "use client";
 
+
+interface infoOmOpplevelseProps {
+  tittel: string;
+  innhold: string;
+  lesMerInnhold: string;
+}
+
+
+/**
+ * Om reisen
+ * 
+Denne reisen tar deg med gjennom spektakulære landskap,
+fjorder og ikoniske utsiktspunkt.
+ * 
+ * 
+ * 
+Turen inkluderer guidede opplevelser, komfortabel transport
+og nøye utvalgte stopp langs veien.
+
+Du får god tid til fotografering, korte fotturer og lokale
+matopplevelser - perfekt både for førstegangsbesøkende og
+erfarne reisende.
+ * 
+ */
+
 import { Button } from "@/components/ui/button";
 import {
   Collapsible,
@@ -8,7 +33,11 @@ import {
 } from "@/components/ui/collapsible";
 import { useState } from "react";
 
-export const InfoOmReisen = () => {
+export const InfoOmOpplevelsen = ({
+  tittel,
+  innhold,
+  lesMerInnhold,
+}: infoOmOpplevelseProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -24,12 +53,11 @@ export const InfoOmReisen = () => {
           {/* Alltid synlig innhold */}
           <div className="space-y-2">
             <h2 className="text-lg font-semibold">
-              Om reisen
+              {tittel}
             </h2>
 
             <p className="text-sm">
-              Denne reisen tar deg med gjennom spektakulære landskap,
-              fjorder og ikoniske utsiktspunkt.
+              {innhold}
             </p>
           </div>
 
@@ -42,19 +70,9 @@ export const InfoOmReisen = () => {
               {isOpen ? "Vis mindre" : "Les mer"}
             </Button>
           </CollapsibleTrigger>
-
           {/* Utvidbart innhold */}
           <CollapsibleContent className="space-y-3 text-sm text-muted-foreground">
-            <p>
-              Turen inkluderer guidede opplevelser, komfortabel transport
-              og nøye utvalgte stopp langs veien.
-            </p>
-
-            <p>
-              Du får god tid til fotografering, korte fotturer og lokale
-              matopplevelser - perfekt både for førstegangsbesøkende og
-              erfarne reisende.
-            </p>
+            {lesMerInnhold}
           </CollapsibleContent>
         </div>
       </div>
